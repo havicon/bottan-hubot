@@ -1,1 +1,1 @@
-web: bin/hubot -a discord
+web: bin/hubot -a discord --name bottan --alias ぼったん
