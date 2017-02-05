@@ -7,6 +7,7 @@
 #   Uncomment the ones you want to try and experiment with.
 #
 #   These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
+random = (n) -> Math.floor(Math.random() * n)
 
 module.exports = (robot) ->
 
@@ -22,11 +23,17 @@ module.exports = (robot) ->
   himo = ["ゴミ", "カス", "ヒモ", "うんこ", "はなくそ"]
   mesi = ["https://pbs.twimg.com/media/BWNpjsRCQAALxjM.jpg", "https://pbs.twimg.com/media/BV_f36ECYAANSYI.jpg", "https://pbs.twimg.com/media/BWNTDWFCcAAhlKa.jpg", "https://pbs.twimg.com/media/BWJSy53CQAAIG54.jpg", "https://pbs.twimg.com/media/BWJVzRNCMAEF3to.jpg", "https://pbs.twimg.com/media/BWJXd-bCEAAyulS.jpg:large", "https://pbs.twimg.com/media/BWJL_7WCEAA6y85.jpg:large"]
 
+
   robot.hear /(はやてす|はやて|ハヤテス|ハヤテ)(どう思う|どう|ってどう思う|とは|って誰)(？|)/i, (msg) ->
     msg.send msg.random himo
 
   robot.hear /(おなかすいた|腹減った|はらへった|おなかすいたよー|おなかすきました)/i, (msg) ->
     msg.send msg.random mesi
+
+  robot.hear /(おはよう！|おは|おはよん|おはよ|おきた|起床)/i, (msg) ->
+    goodmo = ['おはようございます！', 'おはようですー！', 'お早いですね！','今日も一日頑張りましょう！']
+    result = goodmo[random(3)]
+    msg.send "#{result}#{msg.message.user.name}さん"
 
   # robot.hear /badger/i, (res) ->
   #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
