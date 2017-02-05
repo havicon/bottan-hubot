@@ -30,9 +30,11 @@ module.exports = (robot) ->
   robot.hear /(おなかすいた|腹減った|はらへった|おなかすいたよー|おなかすきました)/i, (msg) ->
     msg.send msg.random mesi
 
-  robot.hear /(おはよう！|おは|おはよん|おはよ|おきた|起床)/i, (msg) ->
+  robot.hear /(おはよう！|おは|おはよん|おはよ|おきた|起床|おはよう)/i, (msg) ->
+    if msg.message.user.name == "ハヤテ"
+      msg.send "永遠に地の底に眠れ。ゴミ"
     goodmo = ['おはようございます！', 'おはようですー！', 'お早いですね！','今日も一日頑張りましょう！']
-    result = goodmo[random(3)]
+    result = goodmo[random(4)]
     msg.send "#{result}#{msg.message.user.name}さん"
 
   # robot.hear /badger/i, (res) ->
