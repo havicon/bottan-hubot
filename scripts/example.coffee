@@ -19,6 +19,10 @@ module.exports = (robot) ->
     himo = ["ゴミ", "カス", "ヒモ", "うんこ", "はなくそ"]
     msg.send msg.random himo
 
+  robot.hear /(はやてす|はやて|ハヤテス|ハヤテ)(は|)(正社員|)(？|)/i, (msg) ->
+    neet = "ニート"
+    msg.send  neet
+
   robot.hear /(おなかすいた|腹減った|はらへった|おなかすいたよー|おなかすきました)/i, (msg) ->
     mesi = ["https://pbs.twimg.com/media/BWNpjsRCQAALxjM.jpg", "https://pbs.twimg.com/media/BV_f36ECYAANSYI.jpg", "https://pbs.twimg.com/media/BWNTDWFCcAAhlKa.jpg", "https://pbs.twimg.com/media/BWJSy53CQAAIG54.jpg", "https://pbs.twimg.com/media/BWJVzRNCMAEF3to.jpg", "https://pbs.twimg.com/media/BWJXd-bCEAAyulS.jpg:large", "https://pbs.twimg.com/media/BWJL_7WCEAA6y85.jpg:large"]
     msg.send msg.random mesi
