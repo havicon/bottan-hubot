@@ -52,7 +52,7 @@ module.exports = (robot) ->
       result = goodmo[random(4)]
       msg.send "#{result}#{msg.message.user.name}さん"
 
-  robot.respond /(今日の運勢|うらない|占い)/i, (msg) ->
+  robot.hear /(今日の運勢|うらない|占い)/i, (msg) ->
     fortunes = [
       '大吉',
       '末吉',
