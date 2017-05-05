@@ -70,4 +70,4 @@ module.exports = (robot) ->
     else if msg.message.user.name == "ハヤテ"
       msg.send "大凶"
     else
-      msg.send "今日の運勢: #{result}"
+      msg.send "じゃかじゃかじゃかじゃか....じゃーん！「#{result}」です！"
