@@ -1,11 +1,6 @@
-cronJob = require('cron').CronJob
+CronJob = require('cron').CronJob
 
 module.exports = (robot) ->
-  send = (room, msg) ->
-    response = new robot.Response(robot, {user : {id : -1, name : room}, text : "none", done : false}, [])
-    response.send msg
-
-  # *(sec) *(min) *(hour) *(day) *(month) *(day of the week)
-  new cronJob('0 * * * * *', () ->
-    send 'general', "定期メッセージ"
-  ).start()
+  new CronJob '0 * * * * *', () =>
+    robot.messageRoom "general", "テスト"
+  , null, true, "Asia/Tokyo"
