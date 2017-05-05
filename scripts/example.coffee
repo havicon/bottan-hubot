@@ -7,13 +7,28 @@ random = (n) -> Math.floor(Math.random() * n)
 module.exports = (robot) ->
 
   robot.respond /(((い|ゐ|居)(て?))(?!り)|(お|を|居)|((い|居)(て?)は)(?!ま))((る|ん(?=の))|((り?)ます)(?!ん))((の?ん?)(です)?|(んだ)(?!か))?(か(い?な?|よ|ね)?|(よ?)(ね|な))?\s?(\?|？)/i, (msg) ->
-    msg.send "はい、ここにいます!"
+    if msg.message.user.name == "hayate"
+      msg.send "いません"
+    else if msg.message.user.name == "ハヤテ"
+      msg.send "いません"
+    else
+      msg.send "はい、ここにいます!"
 
   robot.respond /(い|生|活)きて(((い|ゐ|居)(て?))(?!り)|(お|を|居)|)?((る|ん(?=の))|((り?)ます)(?!ん))((の?ん?)(です)?|(んだ)(?!か))?(か(い?な?|よ|ね)?|(よ?)(ね|な))?/i, (msg) ->
-    msg.send "はい、ここにいます。"
+    if msg.message.user.name == "hayate"
+      msg.send "いません"
+    else if msg.message.user.name == "ハヤテ"
+      msg.send "いません"
+    else
+      msg.send "はい、ここにいます!"
 
   robot.respond /(調子どう|元気)/i, (msg) ->
-    msg.send "はい、元気です！"
+    if msg.message.user.name == "hayate"
+      msg.send "あなたのおかげで元気なくした"
+    else if msg.message.user.name == "ハヤテ"
+      msg.send "あなたのおかげで元気なくした"
+    else
+      msg.send "はい、元気です！"
 
   robot.hear /(はやてす|はやて|ハヤテス|ハヤテ)(どう思う|どう|ってどう思う|とは|って誰)(？|)/i, (msg) ->
     himo = ["ゴミ", "カス", "ヒモ", "うんこ", "はなくそ"]
