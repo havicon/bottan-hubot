@@ -30,6 +30,24 @@ module.exports = (robot) ->
   robot.hear /(おはよう！|おは|おはよん|おはよ|おきた|起床|おはよう)/i, (msg) ->
     if msg.message.user.name == "hayate"
       msg.send "ねてろ"
-    goodmo = ['おはようございます！', 'おはようですー！', 'お早いですね！','今日も一日頑張りましょう！']
-    result = goodmo[random(4)]
-    msg.send "#{result}#{msg.message.user.name}さん"
+    else if msg.message.user.name == "ハヤテ"
+      msg.send "ねてろ"
+    else
+      goodmo = ['おはようございます！', 'おはようですー！', 'お早いですね！','今日も一日頑張りましょう！']
+      result = goodmo[random(4)]
+      msg.send "#{result}#{msg.message.user.name}さん"
+
+  robot.respond /(今日の運勢|うらない|占い)/i, (msg) ->
+    fortunes = [
+      '大吉',
+      '末吉',
+      '凶',
+      '吉'
+    ]
+    result = fortunes[random(4)]
+    if msg.message.user.name == "hayate"
+      msg.send "大凶"
+    else if msg.message.user.name == "ハヤテ"
+      msg.send "大凶"
+    else
+      msg.send "今日の運勢: #{result}"
