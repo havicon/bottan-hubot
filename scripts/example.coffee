@@ -34,7 +34,7 @@ module.exports = (robot) ->
     himo = ["ゴミ", "カス", "ヒモ", "うんこ", "はなくそ"]
     msg.send msg.random himo
 
-  robot.hear /(はやてす|はやて|ハヤテス|ハヤテ)(は)(正社員|)(？|)/i, (msg) ->
+  robot.hear /(はやてす|はやて|ハヤテス|ハヤテ)(は)(正社員)(？)/i, (msg) ->
     neet = "ニート"
     msg.send  neet
 
