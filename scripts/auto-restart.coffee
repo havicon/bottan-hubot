@@ -52,7 +52,6 @@ cron = require('cron').CronJob
 module.exports = (robot) ->
 
   new cron '* * * * *', () =>
-    robot.send {room: "#general"}, "サーバー再起動するよ"
 
     cmd = 'echo test'
 
