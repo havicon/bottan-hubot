@@ -1,1 +1,1 @@
-web: bin/hubot -a discord mcrcon --name bottan --alias ぼったん
+web: bin/hubot -a discord --name bottan --alias ぼったん
