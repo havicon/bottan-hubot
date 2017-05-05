@@ -8,6 +8,6 @@ module.exports = (robot) ->
                           .get()
     request (err, res, body) ->
       json = JSON.parse body
-      msg.send json['message']
+      robot.messageRoom "277289069086507009", json['message']
 
   , null, true, "Asia/Tokyo"
