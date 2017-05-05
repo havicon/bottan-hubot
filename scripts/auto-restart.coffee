@@ -4,6 +4,4 @@ module.exports = (robot) ->
                           .get()
     request (err, res, body) ->
       json = JSON.parse body
-      msg.send json.results[0].text if json.results.length > 0
-      msg.send body
-      msg.send "test"
+      msg.send json
