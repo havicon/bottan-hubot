@@ -4,4 +4,4 @@ module.exports = (robot) ->
                           .get()
     request (err, res, body) ->
       json = JSON.parse body
-      msg.send json
+      msg.send json['message']
