@@ -8,5 +8,5 @@ module.exports = (robot) ->
   # *(sec) *(min) *(hour) *(day) *(month) *(day of the week)
   new cronJob('* * * * * *', () ->
     currentTime = new Date
-    send '#general', "定期メッセージ"
+    send '277289069086507009', "定期メッセージ"
   ).start()
