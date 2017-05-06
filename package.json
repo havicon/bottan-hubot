@@ -10,6 +10,7 @@
     "hubot": "^2.19.0",
     "hubot-diagnostics": "0.0.1",
     "hubot-discord": "^1.3.0",
+    "hubot-docomo-dialogue": "https://github.com/bouzuya/hubot-docomo-dialogue/archive/master.tar.gz",
     "hubot-google-images": "^0.2.6",
     "hubot-google-translate": "^0.2.0",
     "hubot-help": "^0.2.0",
