@@ -47,7 +47,7 @@ module.exports = (robot) ->
       mesi = ["https://pbs.twimg.com/media/BWNpjsRCQAALxjM.jpg", "https://pbs.twimg.com/media/BV_f36ECYAANSYI.jpg", "https://pbs.twimg.com/media/BWNTDWFCcAAhlKa.jpg", "https://pbs.twimg.com/media/BWJSy53CQAAIG54.jpg", "https://pbs.twimg.com/media/BWJVzRNCMAEF3to.jpg", "https://pbs.twimg.com/media/BWJXd-bCEAAyulS.jpg:large", "https://pbs.twimg.com/media/BWJL_7WCEAA6y85.jpg:large"]
       msg.send msg.random mesi
 
-  robot.hear /(おはよう！|おは|おはよん|おはよ|おきた|起床|おはよう)/i, (msg) ->
+  robot.hear /(おはよう！|おはよん|おはよ|おきた|起床|おはよう)/i, (msg) ->
     if msg.message.user.name == "hayate"
       msg.send "ねてろ"
     else if msg.message.user.name == "ハヤテ"
