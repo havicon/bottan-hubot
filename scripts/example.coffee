@@ -9,7 +9,7 @@ module.exports = (robot) ->
   robot.respond /(((い|ゐ|居)(て?))(?!り)|(お|を|居)|((い|居)(て?)は)(?!ま))((る|ん(?=の))|((り?)ます)(?!ん))((の?ん?)(です)?|(んだ)(?!か))?(か(い?な?|よ|ね)?|(よ?)(ね|な))?\s?(\?|？)/i, (msg) ->
     if msg.message.user.name == "hayate"
       msg.send "いません"
-    else if msg.message.user.name == "ハヤテ"
+    else if msg.message.user.id == "182372924089565194"
       msg.send "いません"
     else
       msg.send msg.message.user.id
@@ -17,7 +17,7 @@ module.exports = (robot) ->
   robot.respond /(い|生|活)きて(((い|ゐ|居)(て?))(?!り)|(お|を|居)|)?((る|ん(?=の))|((り?)ます)(?!ん))((の?ん?)(です)?|(んだ)(?!か))?(か(い?な?|よ|ね)?|(よ?)(ね|な))?/i, (msg) ->
     if msg.message.user.name == "hayate"
       msg.send "いません"
-    else if msg.message.user.id == ""
+    else if msg.message.user.id == "182372924089565194"
       msg.send "いません"
     else
       msg.send "はい、ここにいます!"
