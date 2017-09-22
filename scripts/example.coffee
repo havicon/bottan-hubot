@@ -12,12 +12,12 @@ module.exports = (robot) ->
     else if msg.message.user.name == "ハヤテ"
       msg.send "いません"
     else
-      msg.send "はい、ここにいます!"
+      msg.send msg.message.user.id
 
   robot.respond /(い|生|活)きて(((い|ゐ|居)(て?))(?!り)|(お|を|居)|)?((る|ん(?=の))|((り?)ます)(?!ん))((の?ん?)(です)?|(んだ)(?!か))?(か(い?な?|よ|ね)?|(よ?)(ね|な))?/i, (msg) ->
     if msg.message.user.name == "hayate"
       msg.send "いません"
-    else if msg.message.user.name == "ハヤテ"
+    else if msg.message.user.id == ""
       msg.send "いません"
     else
       msg.send "はい、ここにいます!"
